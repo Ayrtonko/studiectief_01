@@ -1,9 +1,13 @@
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class Schedule {
-    private Date date;
+    private Calendar date;
 
     public Schedule(){}
 
-    public Date reschedule(){}
+    public Calendar reschedule(){
+        Calendar calendar = new GregorianCalendar();
+        return calendar;
+    }
 }
