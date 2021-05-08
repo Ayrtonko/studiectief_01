@@ -7,8 +7,9 @@ public class Account {
     private Long id =0L;
     private String password;
     private ArrayList<Calendar> availability= new ArrayList<Calendar>();
+    private int ratingApp;
     ArrayList<Schedule> creates = new ArrayList<Schedule>();
-    ArrayList<Review> gives = new ArrayList<Review>();
+
 
     public Account(String name, String password){}
 
