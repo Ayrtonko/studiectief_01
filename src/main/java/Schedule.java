@@ -1,5 +1,8 @@
+import java.util.ArrayList;
+
 public class Schedule {
     private String name;
+    ArrayList<Session>has = new ArrayList<Session>();
 
     public Schedule(String name){}
 
