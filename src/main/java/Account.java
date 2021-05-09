@@ -8,6 +8,7 @@ public class Account {
     private String password;
     private ArrayList<Calendar> availability= new ArrayList<Calendar>();
     private int ratingApp;
+    private boolean loggedIn;
     ArrayList<Schedule> creates = new ArrayList<Schedule>();
 
 
