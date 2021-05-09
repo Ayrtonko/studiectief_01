@@ -1,10 +1,14 @@
 import java.util.ArrayList;
 
 public class Schedule {
+
+
     private String name;
     ArrayList<Session>has = new ArrayList<Session>();
 
-    public Schedule(String name){}
+    public Schedule(String name){
+        this.name = name;
+    }
 
     public String summary(){
         return "";
@@ -12,5 +16,11 @@ public class Schedule {
 
     public Schedule export(){
         return this;
+    }
+    public String getName() {
+        return name;
+    }
+    public boolean equalsName(Schedule that){
+        return this.getName() == that.getName();
     }
 }
