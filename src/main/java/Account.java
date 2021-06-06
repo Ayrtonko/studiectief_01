@@ -31,11 +31,13 @@ public class Account {
         this.enabled=false;
     }
 
-    public void login(String nameInput, String passInput){
+    public static void login(String nameInput, String passInput){
+
         for(Account i: allAccounts){
             if((i.getLogin().getUsername().equals(nameInput)) && (i.getLogin().getPassword().equals(passInput))){
                 i.setEnabled(true);
             }
+            System.out.println("you're logged in");
         }
     }
     public void logout(){
