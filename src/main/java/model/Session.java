@@ -1,15 +1,17 @@
-package models;
+package model;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.ArrayList;
 
 public class Session {
-    private static Long lastSessionId = 0L;
-    private Long sessionId;
+    private LocalDate date;
     private int durationSession;
     private Boolean completed;
     private int ratingSession;
-    private Period has;
+    private ArrayList<Period> has;
 
-    public Session(Period period){
-        this.has = period;
+    public Session(LocalDate date){
     }
 
     public static Session createSession(){

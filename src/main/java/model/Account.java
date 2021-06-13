@@ -1,4 +1,4 @@
-package models;
+package model;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,22 +9,9 @@ public class Account {
     private Login login;
 
     private static ArrayList<Account>allAccounts = new ArrayList<Account>();
-
-    private ArrayList <NotAvailable> notAvailable = new ArrayList<>();
-
-    Scanner scanner = new Scanner(System.in);
-
-    public void addNotAvailableDayToAccount(){
-        Account account = getLoggedUser();
-        account.notAvailable.add(NotAvailableDay.createNotAvailable());
-    }
-
-    public void addNotAvailableHourToAccount(){
-        Account account = getLoggedUser();
-        account.notAvailable.add(NotAvailableHour.createNotAvailable());
-    }
-
-
+    private ArrayList <NotAvailableDay> notAvailable = new ArrayList<>();
+    private ArrayList <Rating>givesApp = new ArrayList<>();
+    private ArrayList<Schedule>creates = new ArrayList<>();
 
     public Account(Profile profile, Login login){
         this.profile = profile;
@@ -33,6 +20,13 @@ public class Account {
         this.enabled=false;
     }
 
+    public ArrayList<Schedule> getCreates() {
+        return creates;
+    }
+
+    public void addCreates(Schedule schedule){
+        creates.add(schedule);
+    }
     public static void login(String nameInput, String passInput){
 
         for(Account i: allAccounts){
@@ -42,7 +36,8 @@ public class Account {
             System.out.println("you're logged in");
         }
     }
-    public void logout(){
+
+    public static void logout(){
         for(Account i: allAccounts){
             if(i.isEnabled()) {
                 i.enabled = false;
@@ -58,9 +53,21 @@ public class Account {
             return null;
     }
 
+    public ArrayList<Rating> getGivesApp() {
+        return givesApp;
+    }
+
     public static Account createAccount(){
         Login.createLogin();
         return new Account(Profile.createProfile(), Login.createLogin());
+    }
+
+    public void addRating(Rating rate){
+        givesApp.add(rate);
+    }
+
+    public void addNotAvailable(NotAvailableDay obj){
+        notAvailable.add(obj);
     }
 
     public String getProfileFirstname(){
@@ -71,7 +78,7 @@ public class Account {
         return this.login.getUsername();
     }
 
-    public  String getPasswordLogin(){
+    public String getPasswordLogin(){
         return login.getPassword();
     }
 
@@ -95,7 +102,7 @@ public class Account {
         return allAccounts;
     }
 
-    public ArrayList<NotAvailable> getNotAvailable() {
+    public ArrayList<NotAvailableDay> getNotAvailable() {
         return notAvailable;
     }
 

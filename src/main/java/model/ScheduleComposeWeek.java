@@ -1,11 +1,11 @@
-package models;
+package model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ScheduleComposeWeek extends ScheduleCompose{
-    public ScheduleComposeWeek(String name) {
-        super(name);
+    public ScheduleComposeWeek(String name, int time, LocalDate date) {
+        super(name,time, date);
     }
 
     @Override

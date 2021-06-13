@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterController">
+   <children>
+      <Text layoutX="257.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Screen" />
+      <Text layoutX="272.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="firstname" />
+      <Text layoutX="272.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="username" />
+      <Text layoutX="273.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" text="password" />
+      <TextField fx:id="regFirst" layoutX="220.0" layoutY="117.0" />
+      <TextField fx:id="regName" layoutX="220.0" layoutY="172.0" />
+      <PasswordField fx:id="regPass" layoutX="220.0" layoutY="233.0" />
+      <Button fx:id="signupButton" layoutX="326.0" layoutY="272.0" mnemonicParsing="false" onAction="#signup" text="signup" />
+      <Text fx:id="errorMsg" fill="#8f2727" layoutX="163.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="username is not unique, please try something else" visible="false" />
+      <Button fx:id="backButton" layoutX="532.0" layoutY="360.0" mnemonicParsing="false" onAction="#toLogin" text="back" />
+   </children>
+</AnchorPane>

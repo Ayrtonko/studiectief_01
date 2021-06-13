@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ScheduleController">
+   <children>
+      <Button fx:id="backButton" layoutX="509.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#toMenu" text="back" />
+      <ListView fx:id="listDays" layoutX="200.0" layoutY="72.0" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

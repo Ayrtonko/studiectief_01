@@ -1,6 +1,6 @@
-import models.Account;
-import models.Login;
-import models.Profile;
+import model.Account;
+import model.Login;
+import model.Profile;
 import org.junit.Test;
 
 
