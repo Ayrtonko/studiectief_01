@@ -57,10 +57,6 @@ public class Account {
         return givesApp;
     }
 
-    public static Account createAccount(){
-        Login.createLogin();
-        return new Account(Profile.createProfile(), Login.createLogin());
-    }
 
     public void addRating(Rating rate){
         givesApp.add(rate);

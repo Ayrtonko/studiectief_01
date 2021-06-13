@@ -17,20 +17,6 @@ public class Login {
         allUsernames.add(this);
     }
 
-    public static Login createLogin(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("what username would you like?");
-        String username = "user"; //TODO change to scanner
-        if(checkUniqueUsername(username)){
-            System.out.println("Username already exists");
-            return null;
-        }
-            System.out.println("what's the desired password?");
-            String password = "ww"; //TODO change to scanner
-            return new Login(username, password);
-
-    }
-
     public static boolean checkUniqueUsername(String username){
         for(Login i:allUsernames){
             if(i.getUsername().equals(username)){
