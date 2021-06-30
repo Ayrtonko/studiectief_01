@@ -4,20 +4,14 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
-public class Session {
-    private LocalDate date;
-    private int durationSession;
+public abstract class Session {
     private Boolean completed;
-    private int ratingSession;
-    private ArrayList<Period> has;
+    private int duration;
 
-    public Session(LocalDate date){
+    public Session(){
+        duration();
     }
 
-    public static Session createSession(){
-        return null;
-    }
-    public void rateSession(int rate){
-        this.ratingSession = rate;
-    }
+    public abstract void duration();
+
 }

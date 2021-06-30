@@ -11,11 +11,8 @@ public class Profile {
         this.firstName= firstName;
     }
 
-    public static Profile createProfile(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("what is your firstname?");
-        String firstname = "name";//TODO change to scanner
-        return new Profile(firstname);
+    public static Profile createProfile(String firstName){
+        return new Profile(firstName);
     }
 
     public String getFirstName() {

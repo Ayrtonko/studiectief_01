@@ -15,15 +15,11 @@ public class Rating {
         return appRating;
     }
 
-    public void setAppRating(int appRating) {
-        this.appRating = appRating;
-    }
-
-    public void toRateList(int rate){
-        if(checkRating(rate)) {
-            Account.getLoggedUser().addRating(new Rating(rate));
-        }
-    }
+   public void toRateList(int rate) {
+       if (checkRating(rate)) {
+           Account.getLoggedAccount().getGivesApp().add(new Rating(rate));
+       }
+   }
 
     public String toString(){
         return String.valueOf(appRating);

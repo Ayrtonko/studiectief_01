@@ -6,7 +6,6 @@ public class Main {
         Login login = new Login("a","a");
         Account account = new Account(profile, login);
         JavaFXApp.main(args);
-
         }
 
 }

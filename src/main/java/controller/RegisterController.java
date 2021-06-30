@@ -7,7 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import model.Account;
-import model.Login;
+import model.LoginCreator;
 import model.Profile;
 
 import java.io.IOException;
@@ -35,30 +35,23 @@ public class RegisterController extends NavigationController{
     @FXML
     private Text errorMsg;
 
+
     public void signup() throws IOException {
-        Login login = new Login(regName.getText(),regPass.getText());
-        Profile profile = new Profile(regFirst.getText());
-        redirect();
-        Account account = new Account(profile,login);
+        confirmSignup();
     }
 
-    public Boolean checkUniqueName(){
-        Boolean check = true;
-        for(Account i: Account.getAllAccounts()){
-            if(i.getLogin().getUsername().equals(regName.getText())){
-                check = false;
-            }
-        }
-        return check;
-    }
 
-    @Override
-    public void redirect() throws IOException {
-        if(!checkUniqueName()){
+
+   @Override
+    public void confirmSignup() throws IOException {
+        if(!LoginCreator.checkUniqueUsername(regName.getText())){
             errorMsg.setVisible(true);
         }
-        else {
+        else if(LoginCreator.checkUniqueUsername(regName.getText())){
+            Account account = new Account(Profile.createProfile(regFirst.getText()),LoginCreator.loginCreate(regName.getText(), regPass.getText()));
             toLogin();
         }
     }
+
+
 }

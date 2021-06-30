@@ -50,7 +50,7 @@ public class RatingController extends NavigationController implements Initializa
     @FXML
     void confirmRating(MouseEvent event) throws IOException{
         if(Rating.checkRating(rate)) {
-            Account.getLoggedUser().addRating(new Rating(this.rate));
+            Account.getLoggedAccount().getGivesApp().add(new Rating(rate));
             toRating();
         }
     }
@@ -89,12 +89,12 @@ public class RatingController extends NavigationController implements Initializa
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ratePreview.setText(String.valueOf(rate));
         if(showRateCondition()) {
-            rateDisplay.setText(String.valueOf(Account.getLoggedUser().getGivesApp().get(Account.getLoggedUser().getGivesApp().size() - 1)));
+            rateDisplay.setText(String.valueOf(Account.getLoggedAccount().getGivesApp().get(Account.getLoggedAccount().getGivesApp().size() - 1)));
         }
     }
 
     public Boolean showRateCondition(){
-        return Account.getLoggedUser().getGivesApp().size() > 0;
+        return Account.getLoggedAccount().getGivesApp().size() > 0;
     }
 
 }

@@ -12,11 +12,13 @@
             <Font size="24.0" />
          </font>
       </Text>
-      <Button fx:id="planButton" layoutX="61.0" layoutY="82.0" mnemonicParsing="false" onMouseClicked="#toSchedule" prefHeight="26.0" prefWidth="92.0" text="my planners" />
-      <Button fx:id="plusButton_01" layoutX="158.0" layoutY="82.0" mnemonicParsing="false" onAction="#toQuiz" prefHeight="26.0" prefWidth="34.0" text="+" />
-      <Button fx:id="reButton" layoutX="61.0" layoutY="128.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="92.0" text="reschedule" />
+      <Button fx:id="planButton" layoutX="61.0" layoutY="82.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="92.0" text="my planners" textFill="#ff1212" />
+      <Button fx:id="plusButton_01" layoutX="158.0" layoutY="82.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="34.0" text="+" textFill="RED" />
+      <Button fx:id="reButton" layoutX="61.0" layoutY="128.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="92.0" text="reschedule" textFill="RED" />
       <Button fx:id="rateButton" layoutX="106.0" layoutY="305.0" mnemonicParsing="false" onAction="#toRating" text="rate our app!" />
       <Button fx:id="logoutButton" layoutX="139.0" layoutY="341.0" mnemonicParsing="false" onAction="#logout" text="logout" />
       <Button fx:id="notAvailableButton" layoutX="61.0" layoutY="174.0" mnemonicParsing="false" onAction="#toNotAvailable" prefHeight="26.0" prefWidth="92.0" text="not available" />
+      <Text fill="RED" layoutX="191.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="in development" />
+      <Text fill="RED" layoutX="217.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="in development" />
    </children>
 </AnchorPane>

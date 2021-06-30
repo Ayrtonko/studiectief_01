@@ -27,9 +27,9 @@
       <Text layoutX="244.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" />
       <TextField fx:id="minuteEnd" layoutX="250.0" layoutY="302.0" prefHeight="26.0" prefWidth="32.0" promptText="00" />
       <Button fx:id="removeHour" layoutX="222.0" layoutY="338.0" mnemonicParsing="false" text="-" />
-      <Button fx:id="addHour" layoutX="255.0" layoutY="338.0" mnemonicParsing="false" text="+" />
+      <Button fx:id="addHour" layoutX="255.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#createNotAvailableHour" text="+" />
       <DatePicker fx:id="selectDateStart" layoutX="320.0" layoutY="268.0" prefHeight="26.0" prefWidth="200.0" promptText="select date" />
-      <Button fx:id="removeDay" layoutX="462.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#removeDay" text="-" />
+      <Button fx:id="removeDay" layoutX="462.0" layoutY="338.0" mnemonicParsing="false" text="-" />
       <Button fx:id="addDay" layoutX="495.0" layoutY="338.0" mnemonicParsing="false" onMouseClicked="#createNotAvailableDay" text="+" />
       <Button fx:id="backButton" layoutX="529.0" layoutY="13.0" mnemonicParsing="false" onAction="#toMenu" text="back" />
    </children>

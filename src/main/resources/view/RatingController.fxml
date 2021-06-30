@@ -7,12 +7,12 @@
 
 <AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RatingController">
    <children>
-      <Text layoutX="228.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="you rated" wrappingWidth="143.0712890625">
+      <Text layoutX="277.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOU RATED " wrappingWidth="134.71484375">
          <font>
-            <Font size="36.0" />
+            <Font name="Arial Bold" size="36.0" />
          </font>
       </Text>
-      <Text layoutX="277.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="this app">
+      <Text layoutX="312.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="this app">
          <font>
             <Font size="24.0" />
          </font>

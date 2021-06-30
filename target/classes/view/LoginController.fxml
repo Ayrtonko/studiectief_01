@@ -11,7 +11,7 @@
       <TextField fx:id="usernameField" layoutX="225.0" layoutY="153.0" promptText="username" />
       <PasswordField fx:id="passwordField" layoutX="225.0" layoutY="195.0" promptText="password" />
       <Text layoutX="245.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login to StudiEffectief" />
-      <Button fx:id="loginButton" layoutX="332.0" layoutY="234.0" mnemonicParsing="false" onAction="#authentication" text="login" />
+      <Button fx:id="loginButton" layoutX="332.0" layoutY="234.0" mnemonicParsing="false" onAction="#redirect" text="login" />
       <Button fx:id="registerButton" layoutX="506.0" layoutY="18.0" mnemonicParsing="false" onAction="#toRegister" text="register" />
       <Text layoutX="369.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="new to StudieEffectief?" />
       <Text fx:id="errorMsg" fill="#9f2929" layoutX="224.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="wrong username or password" visible="false" />

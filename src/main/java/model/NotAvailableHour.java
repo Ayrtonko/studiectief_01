@@ -2,27 +2,37 @@ package model;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Scanner;
 
-public class NotAvailableHour extends NotAvailableDay{
-    private LocalTime NotAvailableHourStart;
-    private LocalTime NotAvailableHourEnd;
+public class NotAvailableHour extends NotAvailable {
 
-    public NotAvailableHour(LocalTime start, LocalTime end, LocalDate date){
-        super(date);
-        this.NotAvailableHourStart = start;
-        this.NotAvailableHourEnd = end;
+    public NotAvailableHour(LocalDate day, LocalTime timeStart, LocalTime timeEnd) {
+        templateNavailable(day, timeStart, timeEnd);
     }
 
-    public static NotAvailable createNotAvailableDay(LocalDate date, int hour, int minute){
-        LocalTime timeStart = LocalTime.of(hour, minute);
-        LocalTime timeEnd = LocalTime.of(hour, minute);
-        NotAvailableHour not = new NotAvailableHour(timeStart,timeEnd,date);
-        return null;
+
+    @Override
+    public void templateNavailable(LocalDate day, LocalTime timeStart, LocalTime timeEnd) {
+        setDay(day);
+        setTime(timeStart, timeEnd);
     }
 
+    @Override
+    public void setDay(LocalDate day) {
+        this.notAvailableDay = day;
+    }
+
+    @Override
+    public void setTime(LocalTime timeStart, LocalTime timeEnd) {
+        this.notAvailableHourStart =timeStart;
+        this.notAvailableHourEnd = timeEnd;
+    }
 
     public String toString() {
-        return this.NotAvailableHourStart + " till " + this.NotAvailableHourEnd + " on " + this.getNotAvailableDay() + "\n";
-    }
+        try {
+            return notAvailableHourStart + " till " + notAvailableHourEnd + " on " + this.notAvailableDay.getDayOfMonth() + " " + this.notAvailableDay.getMonthValue() + " " + this.notAvailableDay.getYear();
+        }
+        catch (NullPointerException e){
+            return "error";
+        }
+        }
 }

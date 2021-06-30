@@ -29,7 +29,7 @@ public abstract class NavigationController {
     }
 
     public void logout() throws IOException{
-        Account.logout();
+        Account.getLoggedAccount().getLogin().logout();
         AnchorPane pane = FXMLLoader.load(getClass().getResource("/view/LoginController.fxml"));
         rootPane.getChildren().setAll(pane);
     }
@@ -44,23 +44,6 @@ public abstract class NavigationController {
         rootPane.getChildren().setAll(pane);
     }
 
-    public void toQuiz() throws IOException{
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/view/QuizController.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
 
-    public void toSchedule() throws IOException{
-        AnchorPane pane = FXMLLoader.load(getClass().getResource("/view/ScheduleController.fxml"));
-        rootPane.getChildren().setAll(pane);
-    }
-
-
-
-
-    public static int getTextToInt(TextField textField) {
-        String text = textField.getText();
-        return Integer.parseInt(text);
-    }
-
-    public void redirect() throws IOException{}
+    public void confirmSignup() throws IOException{}
 }

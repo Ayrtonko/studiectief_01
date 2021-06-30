@@ -34,10 +34,9 @@ public class LoginController extends NavigationController implements Initializab
     private Text errorMsg;
 
     public void authentication() throws IOException {
-        redirect();
+        confirmSignup();
     }
 
-    @Override
     public void redirect() throws IOException {
         if(passwordCheck()){
             setLoggedAccount(usernameField.getText());
@@ -52,7 +51,7 @@ public class LoginController extends NavigationController implements Initializab
     public void setLoggedAccount(String input){
         for(Account i : Account.getAllAccounts()){
             if(i.getLogin().getUsername().equals(input)){
-                i.setEnabled(true);
+                i.getLogin().login();
             }
         }
     }
